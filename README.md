@@ -1,16 +1,20 @@
-<div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-    <h2>遊戲玩家設定</h2>
-    <hr> <p>目前使用的手機：<strong>Pixel 9a</strong></p>
-    
-    <h3>常用連結</h3>
-    <ul>
-        <li><a href="https://steamcommunity.com/">我的 Steam 檔案</a></li>
-        <li><a href="https://discord.com/">我的 Discord 頻道</a></li>
-    </ul>
-
-    <h3>遊戲截圖</h3>
-    <img src="https://via.placeholder.com/300x150" alt="示範圖片" style="border-radius: 5px;">
-    
-    <p style="color: gray; font-size: 12px;">最後更新：2026年2月</p>
-</div>
-
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的網頁標題</title>
+    <style>
+        /* 強制隱藏所有可能被自動生成的標頭元件 */
+        header, .header, #header, .body-header, .site-header {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>你好，這是我的自介</h1>
+</body>
+</html>
