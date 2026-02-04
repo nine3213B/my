@@ -76,6 +76,32 @@
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
+                /* --- 🆕 新增的文字工具 --- */
+
+        /* 1. 小分類標題 (Subtitle) */
+        /* 用途：用於區分段落內的細項，例如「手機規格：」、「開發工具：」 */
+        .sub-title {
+            color: #ffffff; /* 改成亮白色，與內文灰區隔 */
+            font-size: 1.1em; /* 字體稍微大一點點 */
+            font-weight: bold; /* 加粗 */
+            margin-top: 20px; /* 上方多留點空隙，讓段落分明 */
+            margin-bottom: 5px; /* 下方貼近內容 */
+            display: block; /* 讓它自己佔一行 */
+        }
+
+        /* 2. 重點變色 (Highlight) */
+        /* 用途：讓特定文字變色，例如強調 CPU 型號 */
+        .highlight {
+            color: #ffcc00; /* 亮黃色，在深灰底上很顯眼 */
+            font-weight: bold;
+        }
+
+        /* 3. 補充說明小字 (Note) */
+        /* 用途：寫備註、日期或比較不重要的資訊 */
+        .note {
+            font-size: 0.85em; /* 字體縮小 */
+            color: #888888; /* 顏色變暗 */
+        }
     </style>
 </head>
 <body>
@@ -97,19 +123,21 @@
         <div class="card">
             <h2>Games & Rhythm Games</h2>
             <p>
-                Minecraft:BarbedThyme3213(Java&BE)/nine9184e(BE)
+                <span class="sub-title">Games:</span>
+                <br>Minecraft:BarbedThyme3213<span class="note">(Java&BE)</span>/
+                <br>         nine9184e<span class="note">(BE)</span>
                 <br>CookieRun:Kindom:nine2025c
                 <br>CookieRun:BarbedThyme3213
             </p>
             <p>
-                Mobile:
+                <span class="sub-title">Mobile:</span>
                 <br>Phigros 16.23
                 <br>Arcaea --.--
                 <br>Orzmic 13.68₅
                 <br>Paradigm:Reboot -----
             </p>
             <p>
-                PC:
+                <span class="sub-title">PC:</span>
                 <br>vivid/stasis 19,260
                 <br>PLATiNA::LAB 49785.₆₃
             </p>
@@ -126,6 +154,11 @@
             </p>
         </div>
 
+        <div class="card">
+            <h2>test</h2>
+            <p>test
+            </p>
+        </div>
         <p style="text-align: center; font-size: 0.8em; color: #666; margin-top: 40px;">
             Designed by Me
         </p>
