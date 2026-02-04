@@ -107,6 +107,52 @@
             font-size: 0.85em; /* 字體縮小 */
             color: #888888; /* 顏色變暗 */
         }
+        /* --- 🔗 圖示連結專用樣式 --- */
+
+        /* 1. 排版容器：讓圖示橫向排列，並自動換行 */
+        .icon-row {
+            display: flex; /* 啟用彈性排版 */
+            gap: 20px; /* 圖示之間的間距 */
+            flex-wrap: wrap; /* 如果手機畫面太窄，自動換行 */
+            margin-top: 15px;
+        }
+
+        /* 2. 圖示按鈕本體 */
+        .icon-btn {
+            display: block;
+            width: 60px; /* 圖示寬度 */
+            height: 60px; /* 圖示高度 */
+            transition: transform 0.2s, border-color 0.2s; /* 動畫效果 */
+            border: 2px solid #444; /* 預設邊框顏色 */
+            background-color: #000; /* 背景黑底，防止透明圖看不清 */
+            overflow: hidden; /* 確保圖片不超出框框 */
+        }
+
+        /* 3. 圖片屬性：確保圖片填滿且不變形 */
+        .icon-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 重要！這會讓長方形圖片自動裁切成正方形 */
+        }
+
+        /* 4. 滑鼠移過去的特效 (懸停) */
+        .icon-btn:hover {
+            transform: scale(1.1); /* 稍微放大 */
+            border-color: #00d4ff; /* 邊框變亮藍色 */
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5); /* 加一點發光效果 */
+        }
+
+        /* --- 形狀切換開關 --- */
+        
+        /* 想要圓形就加這個 class */
+        .circle {
+            border-radius: 50%; 
+        }
+
+        /* 想要方形(導圓角)就加這個 class */
+        .square {
+            border-radius: 12px; 
+        }
     </style>
 </head>
 <body>
@@ -149,19 +195,29 @@
         </div>
 
         <div class="card">
-            <h2>自訂標題 3 (例如：連結與專案)</h2>
-            <p>
-                這裡可以放你的連結：
-                <br>
-                🔗 <a href="https://github.com/你的帳號" target="_blank">前往我的 GitHub</a>
-                <br>
-                🎮 <a href="https://steamcommunity.com/" target="_blank">我的 Steam 頁面</a>
-            </p>
+           <h2>社群與連結</h2>
+            <p>點擊下方圖示前往我的個人頁面：</p>
+            
+            <div class="icon-row">
+
+                <a href="https://github.com/你的帳號" target="_blank" class="icon-btn circle" title="前往我的 GitHub">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                </a>
+
+                <a href="https://steamcommunity.com/id/你的ID" target="_blank" class="icon-btn square" title="我的 Steam 檔案">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/2048px-Steam_icon_logo.svg.png" alt="Steam">
+                </a>
+
+                <a href="https://discord.com/users/你的ID" target="_blank" class="icon-btn circle" title="加我 Discord">
+                    <img src="https://assets-global.website-files.com/6257adef93867e56f84d3092/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord">
+                </a>
         </div>
 
         <div class="card">
             <h2>test</h2>
-            <br>teat
+            <p>
+                測試
+            </p>
         </div>
         <p style="text-align: center; font-size: 0.8em; color: #666; margin-top: 40px;">
             Designed by Me
